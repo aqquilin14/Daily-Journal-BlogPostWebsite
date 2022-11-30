@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+
+<% for(var i=0; i<postArray.length; i++){ %>
+<%  const storedTitle = _.lowerCase(postArray[i].title) %>
+<%  if(requestedTitle===storedTitle){ %>
+   <h1><%= requestedTitle %></h1>
+    <p>
+      <%= postArray[i].content %>
+    </p>
+<%  }%>
+<%};%>
+
+<%- include('partials/footer'); -%>
